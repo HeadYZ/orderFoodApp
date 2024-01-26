@@ -18,7 +18,7 @@ export default function Checkout() {
 	function handleSubmit(e) {
 		e.preventDefault()
 
-		const fd = new FormData(e.target.value)
+		const fd = new FormData(e.target)
 		const customerData = Object.fromEntries(fd.entries())
 
 		fetch('http://localhost:3000/orders', {
